@@ -1,4 +1,4 @@
-![Boombox Photo](boombox_stock_photo.jpg "Music Mixer Drag & Drop")
+![boombox_stock_photo](boombox_stock_photo.jpg "Music Mixer Drag & Drop")
 
 ## Music Mixer Drag & Drop Assignment
 
