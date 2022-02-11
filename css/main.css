@@ -1,0 +1,133 @@
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+   #siteContainer {
+    margin: 0 auto;
+    width: 1500px;
+}
+
+   .hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.centeredImg {
+    display: flex;
+    justify-content: center;
+}
+
+.boombox {
+    width: 800px;
+}
+
+.one {
+    display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+     width: 1200px;
+     padding: 15px;
+     padding-top: 50px;
+     padding-bottom: 50px;
+}
+
+.one div {
+    background-color: black;
+}
+
+.two {
+    width: 150px;
+    height: 150px;
+}
+
+.three {
+    display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 1500px;
+     padding: 15px;
+}
+
+.three div {
+    background-color: black;
+}
+
+.four {
+    width: 150px;
+    height: 150px;
+}
+
+.five {
+    display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+     width: 800px;
+     padding: 15px;
+     padding-top: 50px;
+     padding-bottom: 50px;
+}
+
+.five div {
+    background-color: black;
+}
+
+.six {
+    width: 300px;
+    height: 100px;
+}
+
+
+/* _____________________________________
+
+   02. CSS Grid
+   _____________________________________ 
+
+  @supports (grid-area: auto) {
+
+    .site {
+       max-width: none;
+    }
+
+    ------------ Grid Items ------------
+
+    .head, .main > *, .foot {
+       display: grid;
+          grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+    }
+
+    .one-item {
+       display: grid;
+       grid-column: 2 / span 2;
+       grid-template-columns: 1fr;
+    }
+    .two-items {
+        display: grid;
+        grid-column: 2 / span 2;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-evenly; }
+} */
+
+
+
