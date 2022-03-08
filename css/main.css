@@ -12,6 +12,10 @@
     display: none;
 }
 
+.bgColour {
+    background-color: black;
+}
+
 .center {
     text-align: center;
 }
@@ -32,9 +36,19 @@
     padding-bottom: 15px;
 }
 
+.pad {
+    padding: 1em;
+}
+
 .centeredImg {
     display: flex;
     justify-content: center;
+}
+
+.img {
+    padding: 1em;
+    width: 200px;
+    height: 200px;
 }
 
 .boombox {
@@ -83,7 +97,7 @@
      flex-direction: row;
      justify-content: space-between;
      margin: auto;
-     width: 800px;
+     width: 1000px;
      padding: 15px;
      padding-top: 50px;
      padding-bottom: 50px;
