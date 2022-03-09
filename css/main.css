@@ -13,7 +13,7 @@
 }
 
 .bgColour {
-    background-color: black;
+    background-color: rgb(32, 32, 32);
 }
 
 .center {
@@ -22,6 +22,11 @@
 
 .white {
     color: white;
+}
+
+.white_2 {
+    color: white;
+    font-size: 1.5em;
 }
 
 .align {
@@ -47,15 +52,15 @@
 
 .img {
     padding: 1em;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .boombox {
     width: 800px;
 }
 
-.one {
+.dropZones {
     display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -66,16 +71,16 @@
      padding-bottom: 50px;
 }
 
-.one div {
+.dropZones div {
     background-color: black;
 }
 
-.two {
+.drop-zone {
     width: 150px;
     height: 150px;
 }
 
-.three {
+.instruments {
     display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -87,12 +92,12 @@
     background-color: black;
 }
 
-.four {
-    width: 150px;
-    height: 150px;
+.instrumentImg {
+    width: 200px;
+    height: 200px;
 }
 
-.five {
+.buttons {
     display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -103,13 +108,15 @@
      padding-bottom: 50px;
 }
 
-.five div {
-    background-color: black;
+.buttons div {
+    background-image: linear-gradient(yellow, rgb(206, 75, 211));
 }
 
-.six {
+
+.button {
     width: 300px;
     height: 100px;
+    border-radius: 40px;
 }
 
 
