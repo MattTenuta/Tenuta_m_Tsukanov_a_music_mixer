@@ -1,9 +1,25 @@
 (() => {
 
-    let theInstruments = document.querySelectorAll(".instruments");
-        dropZones = document.querySelectorAll(".drop-zone")
+    let theInstruments = document.querySelectorAll(".instruments"),
+        dropZones = document.querySelectorAll(".drop-zone");
+	
+	const theAudio = document.querySelector("audio"),
+		  trackDrop = document.querySelectorAll(".drop-zone");
 
     // functions here
+
+	function loadTrack() {
+		theAudio.src =`audio/${theAudio.dataset.trackref}.mp3`;
+		theAudio.load();
+
+        playTrack();
+	}
+
+	function playTrack() {
+		theAudio.play();
+		debugger;
+	
+	}
 
     function startDrag(event) {
 		event.dataTransfer.setData("draggedElement", event.target.id);
@@ -24,6 +40,8 @@
 
 
     theInstruments.forEach(piece => piece.addEventListener("dragstart", startDrag));
+
+	trackDrop.forEach(drop => drop.addEventListener("drop", loadTrack));
 
     dropZones.forEach(zone => {
 		zone.addEventListener("dragover", draggedOver);
