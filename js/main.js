@@ -3,21 +3,12 @@
     let theInstruments = document.querySelectorAll(".instruments"),
         dropZones = document.querySelectorAll(".drop-zone");
 	
-	const theAudio = document.querySelector("audio"),
-		  trackDrop = document.querySelectorAll(".drop-zone");
+	const theAudio = document.querySelector("audio");
 
     // functions here
 
-	function loadTrack() {
-		theAudio.src =`audio/${theAudio.dataset.trackref}.mp3`;
-		theAudio.load();
-
-        playTrack();
-	}
-
 	function playTrack() {
 		theAudio.play();
-		debugger;
 	
 	}
 
@@ -36,12 +27,18 @@
 		let currentEl = event.dataTransfer.getData("draggedElement");
 		console.log("dropped this element:", currentEl);
 		this.appendChild(document.querySelector(`#${currentEl}`));
+
+		// Have to work out the bugs with this line to get audio working properly
+		//let theAudio = document.querySelector(`audio[data-trackref="${}"]`);
+
+		theAudio.src =`audio/${theAudio.dataset.trackref}.mp3`;
+		theAudio.load();
+
+        playTrack();
     }
 
 
     theInstruments.forEach(piece => piece.addEventListener("dragstart", startDrag));
-
-	trackDrop.forEach(drop => drop.addEventListener("drop", loadTrack));
 
     dropZones.forEach(zone => {
 		zone.addEventListener("dragover", draggedOver);
