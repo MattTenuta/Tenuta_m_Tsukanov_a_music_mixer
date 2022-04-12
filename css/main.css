@@ -70,6 +70,7 @@
      padding: 15px;
      padding-top: 50px;
      padding-bottom: 50px;
+     overflow: hidden;
 }
 
 .dropZones div {
@@ -109,7 +110,7 @@
      padding-bottom: 50px;
 }
 
-.buttons div {
+button {
     background-image: linear-gradient(yellow, rgb(206, 75, 211));
 }
 
