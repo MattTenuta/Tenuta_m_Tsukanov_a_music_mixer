@@ -1,9 +1,13 @@
 (() => {
 
     let theInstruments = document.querySelectorAll(".instruments"),
-        dropZones = document.querySelectorAll(".drop-zone");
+        dropZones = document.querySelectorAll(".drop-zone"),
+		dragBoard = document.querySelector(".instruments");
 	
-	const theAudio = document.querySelector("audio");
+	const theAudio = document.querySelector("audio"),
+	playButton = document.getElementById("playButton"),
+	pauseButton = document.getElementById("pauseButton"),
+	rewindButton = document.getElementById("rewindButton");
 
     // functions here
 
@@ -28,12 +32,28 @@
 		console.log("dropped this element:", currentEl);
 		this.appendChild(document.querySelector(`#${currentEl}`));
 
+		// returns pieces if there is a child
+		dropZones.forEach(zone => {
+			if (zone.childElementCount > 0) {
+				dragBoard.appendChild(zone.firstElementChild);
+			}
+		})
+
 		// Have to work out the bugs with this line to get audio working properly
 		//let theAudio = document.querySelector(`audio[data-trackref="${}"]`);
 
 		theAudio.src =`audio/${theAudio.dataset.trackref}.mp3`;
 		theAudio.load();
 
+        playTrack();
+    }
+
+	function playTrack() {theAudio.play(); }
+	function pauseTrack() {theAudio.pause(); }
+
+    function rewindTrack() {
+        theAudio.currentTime = 0;
+        
         playTrack();
     }
 
@@ -44,5 +64,9 @@
 		zone.addEventListener("dragover", draggedOver);
 		zone.addEventListener("drop", handleDrop);
     });
+
+	playButton.addEventListener("click", playTrack);
+	pauseButton.addEventListener("click", pauseTrack);
+    rewindButton.addEventListener("click", rewindTrack);
 
 })();
